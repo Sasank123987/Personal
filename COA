@@ -1,2 +1,2 @@
 Main memory addressing :
-main memory , 2^k cells , k addressing bit , size of each cell be x , 
+main memory , 2^k cells , k addressing bit , size of each cell be x , if 4 cells then 2 bits are required in cells
