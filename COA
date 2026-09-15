@@ -4,3 +4,4 @@ addresses are not physically stored, decoder in cpu
 
 byte addressable:
 1 byte = bits
+when x is fixed it called as byte addressable
