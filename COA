@@ -4,4 +4,4 @@ addresses are not physically stored, decoder in cpu
 
 byte addressable:
 1 byte = bits
-when x is fixed it called as byte addressable
+when x is fixed it called as byte addressable ,i.e a computer memory organization where every single byte (8 bits) has its own unique numeric address.
