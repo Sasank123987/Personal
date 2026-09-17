@@ -14,3 +14,5 @@ decoder
 binary to decimal to hexadecimal
 
 byte ordering: endianness(big and little) : only in multi-byte data : applies only on primitive data type(not to strings,arrays,etc).
+
+connect decoder to chip select(which is active low)
