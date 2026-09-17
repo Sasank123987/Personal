@@ -16,4 +16,5 @@ binary to decimal to hexadecimal
 byte ordering: endianness(big and little) : only in multi-byte data : applies only on primitive data type(not to strings,arrays,etc).
 
 Memory Expansion:
+use MSB
 connect decoder to chip select(which is active low)
