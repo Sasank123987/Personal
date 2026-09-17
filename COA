@@ -16,5 +16,5 @@ binary to decimal to hexadecimal
 byte ordering: endianness(big and little) : only in multi-byte data : applies only on primitive data type(not to strings,arrays,etc).
 
 Memory Expansion:
-use MSB high order memory interleaving , for LSB low order memory interleaving.
+use MSB(from 1st bit) high order memory interleaving , for LSB (from last bit gives even chips) low order memory interleaving.
 connect decoder to chip select(which is active low)
