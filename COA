@@ -18,3 +18,6 @@ byte ordering: endianness(big and little) : only in multi-byte data : applies on
 Memory Expansion:
 use MSB(from 1st bit) high order memory interleaving , for LSB (from last bit gives even chips) low order memory interleaving.
 connect decoder to chip select(which is active low)
+
+Instruction Set:
+1.supported operations, 2. operands, 3.operand location(memory ore registers or both), 4.Addressing modes, 5.size of operand
