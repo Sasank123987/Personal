@@ -19,5 +19,5 @@ Memory Expansion:
 use MSB(from 1st bit) high order memory interleaving , for LSB (from last bit gives even chips) low order memory interleaving.
 connect decoder to chip select(which is active low)
 
-Instruction Set:
+Instruction Set Design Issues:
 1.supported operations(add,sub,mov,etc), 2. operands(declaration by explicit or implicit), 3.operand location(memory ore registers or both), 4.Addressing modes, 5.size of operand
