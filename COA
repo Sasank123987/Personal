@@ -21,3 +21,14 @@ connect decoder to chip select(which is active low)
 
 Instruction Set Design Issues:
 1.supported operations(add,sub,mov,etc), 2. operands(declaration by explicit or implicit), 3.operand location(memory ore registers or both), 4.Addressing modes, 5.size of operand
+
+bit pattern method (or) encoding method (or) bit sequence method
+8bit instr => 2power(8) => 256 bit patterns
+
+3 instr with two 3 bit operands => opcode/3bit/3bit => opcode is fixed => 3x2p(3)x2p(3) | (opcode = 2bits) | can use any 3 two bits (based on opcode) (00,01,10,11 from this), suppose 01,10,11 is selected here 
+2 instr with one 4 bit operands => opcode/4bit => opcode is fixed => 2x2p(4) | (opcode = 4bits) | 4 combinations (opcode 4 bits) are possible but 2 bits are fixed (00) so 0000,0001,0010,0011 can be used but we only need 2 instr so need only two so give 0000,0001 and 0010,0011 are escape opcode.
+4 instr with one 3 bit operands => opcode/3bit => opcode is fixed => 4x2p(3) | (opcode = 5bits) | 0010,0011 can be used but we need 4 instr so can use 0010_(0/1) and 0011_(0/1)
+
+256<= 256 every bit patterns are used
+
+Always start from instruction with smallest opcode for encoding
