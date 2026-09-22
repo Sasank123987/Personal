@@ -32,3 +32,11 @@ bit pattern method (or) encoding method (or) bit sequence method
 256<= 256 every bit patterns are used
 
 Always start from instruction with smallest opcode for encoding
+
+addressing modes:
+1. Immediate mode : (value is given in the place of operand)
+2. Stack mode : uses implied addressing mode, operands are on stack
+3. Direct addressing mode : address filed contains memory location which contains data (common ) or absolute addressing mode. variables are represented using this
+4. Register addressing mode : 
+
+microprograms
