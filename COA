@@ -33,13 +33,19 @@ bit pattern method (or) encoding method (or) bit sequence method
 
 Always start from instruction with smallest opcode for encoding
 
-Addressing modes:
+addressing modes:
 1. Immediate mode : (value is given in the place of operand)
 2. Stack mode : uses implied addressing mode, operands are on stack
-3. Direct addressing mode : address field contains memory location which contains data (common ) or absolute addressing mode. variables are represented using this. Uses effective addr (direct addr  for data)
+3. Direct addressing mode : address field contains memory location which contains data (common ) or absolute addressing mode. variables are represented using this. Uses 			    effective addr (direct addr  for data)
 4. Register addressing mode : In instr you will have register, where operand is in the register (will have effective addr in instr register part)
-5. Indirect Addr mode or memory indirect addressing mode : instr has memory add, if you go to this add you will find another memory addr, and in that memory addr you will find data. notation => @m or (m)
-6. Register Indirect mode : In instr you will have register, there in that register you will have memory addr, and in that memory addr you will have operand or data (memory has effective addr), 1 memory access is required. value stored in the register is effective addr. Notation => @R or (R)
+5. Indirect Addr mode or memory indirect addressing mode : instr has memory add, if you go to this add you will find another memory addr, and in that memory addr you will 							   find data. notation => @m or (m)
+6. Register Indirect mode : In instr you will have register, there in that register you will have memory addr, and in that memory addr you will have operand or data (memory 			    has effective addr), 1 memory access is required. value stored in the register is effective addr. Notation => @R or (R)
+7. Displacement addressing mode: EA = A + [R] this is same for all three sub modes , A is a constant value or memory address , R is general purpose or special purpose register , 3 sub parts :-
+   (i)   Relative Addressing Mode 	: if register(R) is program counter(PC). PC is special purpose register so mentioning in the instr is not needed. So PC is implied in 					  relative AM, so only value "A" is mentioned called as "offset". Used to implement relocative programs in loops,etc. Popular for jump 					  and branch instructions. Offset is the displacement
+					  EA = A + content in PC
+   (ii)  Base-Register Addressing Mode  : if register(R) is Base register
+   (iii) Indexed Addressing Mode 	: if register(R) is Index register , used to implement "array" in high level languages (C ,etc) , in index value of array is kept in 					  index register as index value is variable and base address of the array is stored in address part of the instruction. Array has 					  index value as a[0] a[1] etc but base address is fixed cant be changed. If index register is a special purpose register then there 					  is no need to mention it in the instruction.
+					  EA = A + content in index register
 
 for register we have less number of bits for size of address than memory
 
