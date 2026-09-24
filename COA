@@ -33,10 +33,15 @@ bit pattern method (or) encoding method (or) bit sequence method
 
 Always start from instruction with smallest opcode for encoding
 
-addressing modes:
+Addressing modes:
 1. Immediate mode : (value is given in the place of operand)
 2. Stack mode : uses implied addressing mode, operands are on stack
-3. Direct addressing mode : address filed contains memory location which contains data (common ) or absolute addressing mode. variables are represented using this
-4. Register addressing mode : 
+3. Direct addressing mode : address field contains memory location which contains data (common ) or absolute addressing mode. variables are represented using this. Uses effective addr (direct addr  for data)
+4. Register addressing mode : In instr you will have register, where operand is in the register (will have effective addr in instr register part)
+5. Indirect Addr mode or memory indirect addressing mode : instr has memory add, if you go to this add you will find another memory addr, and in that memory addr you will find data. notation => @m or (m)
+6. Register Indirect mode : In instr you will have register, there in that register you will have memory addr, and in that memory addr you will have operand or data (memory has effective addr), 1 memory access is required. value stored in the register is effective addr. Notation => @R or (R)
 
-microprograms
+for register we have less number of bits for size of address than memory
+
+
+microprograms imp
