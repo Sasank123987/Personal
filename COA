@@ -49,5 +49,15 @@ addressing modes:
 
 for register we have less number of bits for size of address than memory
 
-
 microprograms imp
+
+Types of cache misses:
+1. Compulsory miss : happens when any block is accessed for the first time in cache memory ,can be reduced using increase in block size
+2. Capacity miss : happens when program size is greater then cache size , can be solved using increase in cache size/
+3. Conflict miss : happens when multiple blocks map to a single line, can be reduced using increasing associativity in cache mapping (DM and Set Associative), conflict miss doesn't happen in fully associative cache
+
+In DM cache no replacement algorithm is used as every block will be mapped to a unique line only. block number mod total lines in cache.
+
+belady's anomaly : cache miss will increase if we increase cache lines, mostly happens in FIFO,random replacement algo.
+
+LRU rep algo: Follows temporal locality
