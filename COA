@@ -61,3 +61,5 @@ In DM cache no replacement algorithm is used as every block will be mapped to a 
 belady's anomaly : cache miss will increase if we increase cache lines, mostly happens in FIFO,random replacement algo.
 
 LRU rep algo: Follows temporal locality
+
+it is not always true that fully associative cache will have better cache hit rate than set associative cache as it depends on block sequences we take to solve the problem
