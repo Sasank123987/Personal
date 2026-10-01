@@ -63,3 +63,10 @@ belady's anomaly : cache miss will increase if we increase cache lines, mostly h
 LRU rep algo: Follows temporal locality
 
 it is not always true that fully associative cache will have better cache hit rate than set associative cache as it depends on block sequences we take to solve the problem
+
+Average Memory Access Time (AMAT):
+
+parallel access and simultaneous access and Look aside ache(not used in modern computers)
+
+Levels of cache memory: L1 (closer to cpu,smaller in size,faster than L2&L3) L2(larger in size than L1,faster than L3), L3(far from cpu,larger in size,faster than main memory but slower than L1 and L2)
+L1 cache is on-chip(primary cache, cpu address first comes to this cache only in search of main memory address) and L2,L3 are off-chip.
