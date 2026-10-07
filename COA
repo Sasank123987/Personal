@@ -70,3 +70,17 @@ parallel access and simultaneous access and Look aside ache(not used in modern c
 
 Levels of cache memory: L1 (closer to cpu,smaller in size,faster than L2&L3) L2(larger in size than L1,faster than L3), L3(far from cpu,larger in size,faster than main memory but slower than L1 and L2)
 L1 cache is on-chip(primary cache, cpu address first comes to this cache only in search of main memory address) and L2,L3 are off-chip.
+
+
+
+Data Dependency : it is a property of code only 
+(1) RAW dependency or flow dependency : Read After Write : I1 = R1 <- R2 + R3 and I2 = R4 <- R1 + R5, here I2(R1) is dependent on I1 and only take latest instruction.So I1-I2 RAW dependency. Should read only after writing.Data Dependency is between instructions not registers.
+(2) WAW dependency or output dependency : Write After Write : I1 = R1 <- ....,  I2 = R1 <-.... here R1 is being written by I1 and I2 so there is a WAW dependecy between I1-I2, but in between no another instruction should write R1.
+(3) WAR dependency or anti-flow dependency : Write After Read : I1 = R2 <- R1 + R3 and I2 = R1 <- R4 + R5, here I1 and I2 are dependent because we cant re order them if we didi then flow would be broken. Here first R1 is being read in I1 and then later in I2 R1 is being written.
+
+If this problem happens in pipelines then this dependencies are called as hazards or else not.
+2 types of pipelines : single issue(only this is in syllabus)(in any cycle only one issue is used like in Instr Fetch only Instr is fetch,etc) and multiple issues.
+In single issue pipeline, WAW,WAR doesnt create any problem(stalls) and RAW can or cannot create stalls. In multi issue pipeline RAW,WAW,WAR can create stalls but can be eliminated using algorothms. RAW is true dependency and WAW,WAr are false dependency or name dependency because it will go if we change the names.
+
+Data Hazards : it is a property of code and pipeline also.
+To check if some dependecy is hazard in pipeline just do normal pipeline execution.
