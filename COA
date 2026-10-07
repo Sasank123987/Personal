@@ -71,6 +71,14 @@ parallel access and simultaneous access and Look aside ache(not used in modern c
 Levels of cache memory: L1 (closer to cpu,smaller in size,faster than L2&L3) L2(larger in size than L1,faster than L3), L3(far from cpu,larger in size,faster than main memory but slower than L1 and L2)
 L1 cache is on-chip(primary cache, cpu address first comes to this cache only in search of main memory address) and L2,L3 are off-chip.
 
+AMAT or Effective Acess Time or Expected Access Time : average time taken for cpu to take data from memory
+latency = access time
+cache hit  : if data is present in cache
+cache miss  : if data is not present in cache
+cache hit rate/hit ratio : out of all main memory accesses how many are present/hit in cache
+cache miss rate/miss ratio : 1 - hit rate
+cache hit time/cache access time : time seen by cpu to access cache memory(upper level of memory) including time taken to check whether there is a cache hit or miss 
+cache miss penality: when you know that data is not there in cache then whole time taken after cache miss is cache miss penality. Additional time required after cache miss is cache penality.(time to check cahce miss/hit is not included)(i.e block transfer from memory to cache and word transgfer from cache to cpu)
 
 
 Data Dependency : it is a property of code only 
