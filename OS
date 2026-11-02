@@ -15,3 +15,10 @@ Communication in process is done using IPC Inter Process Communication and commu
 Threads have their own Program counter, Register, Stack
 Threads should not share stack and registers and can share data, code
 All the threads are part of same address space
+
+Types of threads :
+User threads -  threads made using function calls, Managed entirely in user space
+kernel threads - threads made using system call,Managed, scheduled, and created directly by the operating system kernel using system call
+For each thread there is a Thread Control block (TCB) or Process Control Block (PCB)
+
+From user thread pov kernel can only see the processes p1,p2,p3 but from kernel thread pov kernel can see the threads associated with processes p1,p2,p3
