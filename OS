@@ -14,3 +14,4 @@ One process can have multiple threads.
 Communication in process is done using IPC Inter Process Communication and communication in thread is fast as it can directly read/write to shared variables.
 Threads have their own Program counter, Register, Stack
 Threads should not share stack and registers and can share data, code
+All the threads are part of same address space
