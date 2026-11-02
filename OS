@@ -8,3 +8,9 @@ Parameters are kept in a stack rather than a register or maybe in registers also
 
 function call - executed in user mode, has programs own memory space, fast.
 system call - executed in kernel mode, has protected kernel address space, slow due to context switching.
+
+Thread is the smallest unit of execution in OS.
+One process can have multiple threads.
+Communication in process is done using IPC Inter Process Communication and communication in thread is fast as it can directly read/write to shared variables.
+Threads have their own Program counter, Register, Stack
+Threads should not share stack and registers and can share data, code
