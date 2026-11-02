@@ -5,3 +5,6 @@ system call is way to request a service from the operating system's kernel.
 Each system call has a unique number associated to it and OS has a system call table which maps this numbers to a particular functions
 So when user invokes a system call with number and parameters associated with system call in the register(RAX - cpu register) then syscall is executed.
 Parameters are kept in a stack rather than a register or maybe in registers also as paramters can be huge.
+
+function call - executed in user mode, has programs own memory space, fast.
+system call - executed in kernel mode, has protected kernel address space, slow due to context switching.
