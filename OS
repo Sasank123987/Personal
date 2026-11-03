@@ -1,10 +1,10 @@
 Program in execution is process
 
 system call is way to request a service from the operating system's kernel.
-2 Privilage modes - User mode ( Non-Privileged Mode ) - Ring 3 and Kernel mode ( Privileged Mode ) - Ring 0, Ring 1, Ring 2
+2 Privilege modes - User mode ( Non-Privileged Mode ) - Ring 3 and Kernel mode ( Privileged Mode ) - Ring 0, Ring 1, Ring 2
 Each system call has a unique number associated to it and OS has a system call table which maps this numbers to a particular functions
 So when user invokes a system call with number and parameters associated with system call in the register(RAX - cpu register) then syscall is executed.
-Parameters are kept in a stack rather than a register or maybe in registers also as paramters can be huge.
+Parameters are kept in a stack rather than a register as parameters can be huge.
 
 function call - executed in user mode, has programs own memory space, fast.
 system call - executed in kernel mode, has protected kernel address space, slow due to context switching.
@@ -13,12 +13,13 @@ Thread is the smallest unit of execution in OS.
 One process can have multiple threads.
 Communication in process is done using IPC Inter Process Communication and communication in thread is fast as it can directly read/write to shared variables.
 Threads have their own Program counter, Register, Stack
-Threads should not share stack and registers and can share data, code
+Threads should not share stack and registers and can share data, code, files, heap.
 All the threads are part of same address space
 
 Types of threads :
-User threads -  threads made using function calls, Managed entirely in user space
-kernel threads - threads made using system call,Managed, scheduled, and created directly by the operating system kernel using system call
+User level threads -  threads made using function calls, Managed entirely in user space
+kernel level threads - threads made using system call,Managed, scheduled, and created directly by the operating system kernel using system call
 For each thread there is a Thread Control block (TCB) or Process Control Block (PCB)
 
+User-level threads (ULTs) are threads of execution that are managed entirely by user-space thread libraries and from kernel's pov application is just single-threaded process.
 From user thread pov kernel can only see the processes p1,p2,p3 not the threads inside the processes but from kernel thread pov kernel can see the threads associated with processes p1,p2,p3
