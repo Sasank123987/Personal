@@ -1,5 +1,7 @@
 Program in execution is process
 
+Context of a process : Every process has its own context means updating what process has done upto means Register values,Program state,Program Counter,etc. Special Data Structure which keeps track of context is Struct. PCB is a struct (Process Control Block)
+
 system call is way to request a service from the operating system's kernel.
 2 Privilege modes - User mode ( Non-Privileged Mode ) - Ring 3 and Kernel mode ( Privileged Mode ) - Ring 0, Ring 1, Ring 2
 Each system call has a unique number associated to it and OS has a system call table which maps this numbers to a particular functions
