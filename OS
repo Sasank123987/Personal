@@ -25,3 +25,5 @@ For each thread there is a Thread Control block (TCB) or Process Control Block (
 
 User-level threads (ULTs) are threads of execution that are managed entirely by user-space thread libraries and from kernel's pov application is just single-threaded process.
 From user thread pov kernel can only see the processes p1,p2,p3 not the threads inside the processes but from kernel thread pov kernel can see the threads associated with processes p1,p2,p3
+
+Context Switch : Saving the state of processes before switching to another process and restoring original process state when switching back.
