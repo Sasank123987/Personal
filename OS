@@ -27,3 +27,17 @@ User-level threads (ULTs) are threads of execution that are managed entirely by 
 From user thread pov kernel can only see the processes p1,p2,p3 not the threads inside the processes but from kernel thread pov kernel can see the threads associated with processes p1,p2,p3
 
 Context Switch : Saving the state of processes before switching to another process and restoring original process state when switching back.
+
+File System in UNIX:
+
+sector - unit of storage 
+usually sector size is 4KB (depends upon software windows,mac,unix,etc)
+
+metadata of a file or directory is stored in a data structure called inode 
+for every file or directory we have 1 inode
+every inode has 1 inode number
+
+inode of a file contains - metadata , data block pointer ( pointer where actual data blockes are there in stirage device) doesn't contain file name or actual file content.
+inode of a directory contains - metadata same as any file only i.e permissions, timestamps, etc and data blocks ( pointer to the inode number of files). Data block of the directory contains inode table 
+
+Disk contains : some part has inode numbers and max part contains actual data
