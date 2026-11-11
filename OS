@@ -31,7 +31,7 @@ Context Switch : Saving the state of processes before switching to another proce
 File System in UNIX:
 
 sector - unit of storage 
-usually sector size is 4KB (depends upon software windows,mac,unix,etc)
+usually sector size is 512 bytes (depends upon software windows,mac,unix,etc)
 
 metadata of a file or directory is stored in a data structure called inode 
 for every file or directory we have 1 inode
