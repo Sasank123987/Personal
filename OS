@@ -31,7 +31,7 @@ Context Switch : Saving the state of processes before switching to another proce
 File System in UNIX:
 
 sector - unit of storage 
-usually sector size is 512 bytes (depends upon software windows,mac,unix,etc)
+usually sector size is 4KB (depends upon software windows,mac,unix,etc)
 
 metadata of a file or directory is stored in a data structure called inode 
 for every file or directory we have 1 inode
@@ -41,3 +41,9 @@ inode of a file contains - metadata , data block pointer ( pointer where actual 
 inode of a directory contains - metadata same as any file only i.e permissions, timestamps, etc and data blocks ( pointer to the inode number of files). Data block of the directory contains inode table 
 
 Disk contains : some part has inode numbers and max part contains actual data
+
+Allocating Disk Space to files :
+1) Contiguous allocation - with some specific length allocated for a sector/block file is placed in the disk. Inode contains starting location of the block and length. Sequential access is faster and random access for a block is also faster (address divided by block size). File size can't be grown easily.
+2) Extent based allocation - multiple contiguous region for a file
+3) Linked allocation - all files in block are stored in linked list. Each block contains pointer to the first block in the file.The directory stores a pointer to the starting and ending blocks. Slow sequential access and random access also is slow. File size can be grown easily.
+4) Variation FAT allocation - Bring all the pointers of linked lists(nodes) to a single place in a file allocation table (FAT). There will be one entry of every sector in FAT
